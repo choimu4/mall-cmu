@@ -27,7 +27,7 @@ public class MemberController {
     public String getMemberById(@PathVariable("idx") Long idx, Model model) {
         MemberDto dto = memberService.readByIdx(idx);
         model.addAttribute("dto", dto);
-        return "./members/info";
+        return "./members/profile";
     }
     @GetMapping("")
     public String getMembers(Model model) {
@@ -55,7 +55,9 @@ public class MemberController {
 
         // Database로 부터 정보를 가져올 예정임
         // 사용자가 제공한 정보와 DB로 부터 가져온 정보를 처리
+        // 동작전 로그
         MemberDto ret = memberService.loginById(m);
+        // 동작 후 로그
         if(ret != null) {
             session.setAttribute("id", id);
             session.setAttribute("idx", ret.getIdx());
