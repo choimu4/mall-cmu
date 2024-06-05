@@ -19,6 +19,7 @@ public class BlogServiceTest {
         BlogDto dto = BlogDto.builder()
                 .title("test1")
                 .content("content1")
+                .views(1L)
                 .writerIdx(3L)
                 .block("non")
                 .build();

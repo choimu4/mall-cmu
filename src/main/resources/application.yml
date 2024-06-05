@@ -33,7 +33,7 @@ server:
     session:
       timeout: 600
 db:
-  url: jdbc:mysql://localhost:3306/db_b200412345
-  username: b200412345
+  url: jdbc:mysql://localhost:3306/db_b202012022
+  username: b202012022
   password: cometrue
   driver-class-name: com.mysql.cj.jdbc.Driver
